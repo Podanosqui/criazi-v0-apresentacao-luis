@@ -8,7 +8,7 @@ const textFieldStyles = {
     borderRadius: '8px',
     background:"white",
     '& .MuiOutlinedInput-notchedOutline': {
-        borderColor: '#A3A3A3', // Ajustando a cor da borda quando não está em foco
+        borderColor: '#A3A3A3',
     }
 };
 
@@ -17,8 +17,6 @@ export default function RecuperarSenha() {
     const navigate = useNavigate();
 
     const handleSalvar = () => {
-        // Aqui você pode adicionar lógica para salvar a nova senha
-        // Após salvar com sucesso, redirecione para a página de login
         navigate('/');
     };
 

@@ -19,8 +19,6 @@ export default function EsqueciSenha() {
     const navigate = useNavigate();
 
     const handleReceberEmail = () => {
-        // Aqui você pode adicionar lógica para enviar o e-mail de recuperação de senha
-        // Após enviar o e-mail com sucesso, redirecione para a página de redefinição de senha
         navigate('/redefinir-senha');
     };
 

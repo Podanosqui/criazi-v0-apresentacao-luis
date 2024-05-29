@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Button, Stack, Typography,  InputBase, Box, IconButton, Pagination } from '@mui/material';
+import { Button, Stack, Typography, Box, IconButton, Pagination } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import LogoTeacher from '../../images/teacher-logo.svg';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -40,7 +40,7 @@ const Chamadas: React.FC = () => {
         setPage(value);
     };
 
-    const paginatedChamadas = Chamada.slice((page - 1) * 5, page * 5);
+    // const paginatedChamadas = Chamada.slice((page - 1) * 5, page * 5);
 
     const navigate = useNavigate();
 
