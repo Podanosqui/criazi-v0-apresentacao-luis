@@ -24,11 +24,11 @@ const style = {
 const Chamadas: React.FC = () => {
     const [quantidadePresentes, setQuantidadePresentes] = useState(0);
     const [quantidadeFaltas, setQuantidadeFaltas] = useState(0);
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
     const [page, setPage] = useState(1);
     const [openModal, setOpenModal] = useState(false);
-    const [modalContent, setModalContent] = useState("");
-    const [modalStudentIndex, setModalStudentIndex] = useState(-1);
+    const [_modalContent, setModalContent] = useState("");
+    // const [modalStudentIndex, setModalStudentIndex] = useState(-1);
 
 
     const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => setPage(value);
@@ -112,9 +112,9 @@ const handleFaltouClick = (index: number) => {
     setStudents(newStudents);
 };
 
-const handleModalOpen = () => {
-    setOpenModal(true);
-};
+// const handleModalOpen = () => {
+//     setOpenModal(true);
+// };
 
 const handleModalClose = () => {
     setOpenModal(false);
