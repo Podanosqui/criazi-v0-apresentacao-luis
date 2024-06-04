@@ -6,7 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CreateIcon from '@mui/icons-material/Create';
-import qulquer from '../../images/close.svg'
+
 const accordionsData = [
     {
         name: "Marcelo",
@@ -116,38 +116,19 @@ export default function Faltas() {
                             Conteúdo da Unidade 2
                         </Typography>
                     )}
-                                    {selectedUnit === 3 && (
-                    <Typography>
-                        Conteúdo da Unidade 3
-                    </Typography>
-                )}
+                    {selectedUnit === 3 && (
+                        <Typography>
+                            Conteúdo da Unidade 3
+                        </Typography>
+                    )}
 
-                {selectedUnit === 4 && (
-                    <Typography>
-                        Conteúdo da Unidade 4
-                    </Typography>
-                )}
+                    {selectedUnit === 4 && (
+                        <Typography>
+                            Conteúdo da Unidade 4
+                        </Typography>
+                    )}
+                </Box>
             </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', outline: '1px solid red', mt: '1rem' }}>
-      <Accordion sx={{ marginRight: '1rem' }}>
-        <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
-          {/* Aqui você pode adicionar qualquer conteúdo para o cabeçalho do Accordion */}
-          Accordion Header
-        </AccordionSummary>
-        <AccordionDetails>
-          {/* Aqui você pode adicionar qualquer conteúdo para o corpo do Accordion */}
-          <Typography>
-            Texto que aparece quando o Accordion é expandido.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Box>
-        <img src={qulquer} alt="" />
-      </Box>
-      <button style={{ marginRight: '1rem' }}>botao1</button>
-      <button>botao2</button>
-    </Box>
-        </Box>
-    </>
-)
+        </>
+    )
 }
