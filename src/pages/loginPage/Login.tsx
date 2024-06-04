@@ -20,7 +20,7 @@ interface LoginProps {
 
 const Login: React.FC<LoginProps> = ({ onLogin }) => {
     {
-        const [_password, setPassword] = useState('');
+        const [password, setPassword] = useState('');
         const [showPassword, setShowPassword] = useState(false);
         const navigate = useNavigate();
 

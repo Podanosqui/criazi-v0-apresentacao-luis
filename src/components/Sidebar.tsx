@@ -2,7 +2,9 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Button, Drawer, IconButton, Stack, Toolbar, Typography, useMediaQuery } from "@mui/material";
 import Logo from '../images/logo.svg';
@@ -36,26 +38,44 @@ const Sidebar: React.FC = () => {
         border: '1px solid #FFDAC6',
       }}
     >
-      <Button
-      onClick={() => {
-        navigate('/minhaconta')
-        setMobileOpen(false)
+      <Stack direction='row' sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '10px'
       }}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '10px'
-        }}
       >
+        <IconButton onClick={handleDrawerToggle}>
+          <ArrowBackIosNewIcon sx={{ color: "#B82900" }} />
+        </IconButton>
         <img src={Logo} alt="Logo Criazi" style={{ width: '56px' }} />
         <Box>
           <Typography fontWeight='bold' fontSize='22px'>Escola Criazi</Typography>
           <Typography sx={{ color: '#8D8D8D', fontSize: '14px' }}>Email@email.com</Typography>
         </Box>
-      </Button>
+      </Stack>
 
       <Stack height="80%">
+        <Button
+          onClick={() => {
+            navigate('/minhaconta')
+            setMobileOpen(false)
+          }}
+          sx={{
+            my: 1,
+            mx: 2,
+            textTransform: "none",
+            color: "#422107",
+            fontSize: "16px",
+            display: "flex",
+            justifyContent: "flex-start",
+            '&:hover': {
+              outline: '1px solid #ff7224',
+              color: "#ff7224"
+            }
+          }}>
+          <AccountCircleOutlinedIcon sx={{ mr: 1 }} />Minha Conta
+        </Button>
         <Button
           onClick={() => {
             navigate('/home')
@@ -178,24 +198,24 @@ const Sidebar: React.FC = () => {
           }}
         >
           <Button
-      onClick={() => {
-        navigate('/minhaconta')
-        setMobileOpen(false)
-      }}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '10px',
-          mb:"1.5rem"
-        }}
-      >
-        <img src={Logo} alt="Logo Criazi" style={{ width: '56px' }} />
-        <Box >
-          <Typography fontWeight='bold' fontSize='18px' color='#422107'>Escola Criazi</Typography>
-          <Typography sx={{ color: '#8D8D8D', fontSize: '12px', textAlign:"start" }}>Email@email.com</Typography>
-        </Box>
-      </Button>
+            onClick={() => {
+              navigate('/minhaconta')
+              setMobileOpen(false)
+            }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              mb: "1.5rem"
+            }}
+          >
+            <img src={Logo} alt="Logo Criazi" style={{ width: '56px' }} />
+            <Box >
+              <Typography fontWeight='bold' fontSize='18px' color='#422107'>Escola Criazi</Typography>
+              <Typography sx={{ color: '#8D8D8D', fontSize: '12px', textAlign: "start" }}>Email@email.com</Typography>
+            </Box>
+          </Button>
 
           <Stack height="80%">
             <Button
